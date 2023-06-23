@@ -1,0 +1,61 @@
+{
+	"name": "sourceblobds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sourceblobls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Sales_order.csv",
+				"container": "sourceblob"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Address",
+				"type": "String"
+			},
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "Unit",
+				"type": "String"
+			},
+			{
+				"name": "Loss",
+				"type": "String"
+			},
+			{
+				"name": "Profit",
+				"type": "String"
+			},
+			{
+				"name": "Balance",
+				"type": "String"
+			},
+			{
+				"name": "Product",
+				"type": "String"
+			},
+			{
+				"name": "Organization",
+				"type": "String"
+			},
+			{
+				"name": "Percentage",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
